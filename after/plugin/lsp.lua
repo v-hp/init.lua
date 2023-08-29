@@ -3,10 +3,12 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
-  'rust_analyzer',
-  'gopls',
-  'vuels',
+    'tsserver',
+    'volar',
+    'rust_analyzer',
+    'gopls',
+    'cssls',
+    'sqlls',
 })
 
 -- Fix Undefined global 'vim'
@@ -59,4 +61,3 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
-

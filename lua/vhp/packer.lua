@@ -69,6 +69,5 @@ return require('packer').startup(function(use)
   use("folke/zen-mode.nvim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
-
 end)
 
