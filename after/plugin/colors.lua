@@ -1,9 +1,7 @@
-require('rose-pine').setup({
-    disable_italics = true
+require('gruvbox').setup({
+    italic = {
+      strings = false
+    }
 });
 
-function ColorMyPencils()
-
-end
-
-vim.cmd('colorscheme rose-pine')
+vim.cmd('colorscheme gruvbox')

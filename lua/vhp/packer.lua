@@ -14,8 +14,8 @@ return require('packer').startup(function(use)
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
+	  'ellisonleao/gruvbox.nvim',
+	  as = 'gruvbox',
   })
 
   use({
@@ -30,9 +30,7 @@ return require('packer').startup(function(use)
       end
   })
 
-  use {
-			'nvim-treesitter/nvim-treesitter',
-			run = function()
+  use { 'nvim-treesitter/nvim-treesitter', run = function()
 				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
 				ts_update()
 			end,}
