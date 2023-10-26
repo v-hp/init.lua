@@ -10,8 +10,14 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  requires = {
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-lua/popup.nvim'},
+    }
   }
+
+  use 'nvim-telescope/telescope-fzy-native.nvim'
+  use 'ThePrimeagen/git-worktree.nvim'
 
   use({
 	  'ellisonleao/gruvbox.nvim',
@@ -39,6 +45,10 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
   use("nvim-treesitter/nvim-treesitter-context");
+  use {
+    "nvim-lualine/lualine.nvim",
+    requires = { "nvim-tree/nvim-web-devicons", opts = true }
+  }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
