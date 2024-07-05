@@ -5,5 +5,6 @@ vim.keymap.set('n', '<C-b>', builtin.git_branches, {})
 vim.keymap.set('n', '<leader>ps', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
+-- vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 

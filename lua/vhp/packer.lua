@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     -- or                            , branch = '0.1.x',
     requires = {
       { 'nvim-lua/plenary.nvim' },
@@ -32,22 +32,22 @@ return require('packer').startup(function(use)
     config = function()
       require("trouble").setup {
         icons = false,
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
       }
     end
   }
 
-  use { 'nvim-treesitter/nvim-treesitter', run = function()
-    local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-    ts_update()
-  end, }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end
+  }
   use "tpope/vim-fugitive"
   use "nvim-treesitter/nvim-treesitter-context"
   use {
     "nvim-lualine/lualine.nvim",
-    requires = { "nvim-tree/nvim-web-devicons", opts = true }
+    requires = { "nvim-tree/nvim-web-devicons", opts = true },
   }
 
   use {
@@ -86,6 +86,4 @@ return require('packer').startup(function(use)
       require("Comment").setup()
     end
   }
-
-  use "christoomey/vim-tmux-navigator"
 end)
